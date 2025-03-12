@@ -1,0 +1,202 @@
+2022-11-06 16:00:19.9252 Info Message Template Auto Format enabled
+2022-11-06 16:00:20.1354 Info Adding target FileTarget(Name=logfile)
+2022-11-06 16:00:20.1686 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-06 16:01:27.4142 Info Message Template Auto Format enabled
+2022-11-06 16:01:27.4672 Info Adding target FileTarget(Name=logfile)
+2022-11-06 16:01:27.4911 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-06 17:18:47.9324 Info Configuration file change detected! Reloading in 1000ms...
+2022-11-06 17:18:48.9425 Info Reloading configuration...
+2022-11-06 17:18:48.9453 Info Loading NLog config from XML file: F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-06 17:18:48.9453 Info Message Template Auto Format enabled
+2022-11-06 17:18:48.9453 Info Adding target FileTarget(Name=logfile)
+2022-11-06 17:18:48.9453 Info Closing old configuration.
+2022-11-06 17:18:48.9677 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-06 17:19:25.2228 Info Message Template Auto Format enabled
+2022-11-06 17:19:25.3840 Info Adding target FileTarget(Name=logfile)
+2022-11-06 17:19:25.4123 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-06 17:23:56.9751 Info Message Template Auto Format enabled
+2022-11-06 17:23:57.0946 Info Adding target FileTarget(Name=logfile)
+2022-11-06 17:23:57.1218 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-06 19:19:45.0211 Info Message Template Auto Format enabled
+2022-11-06 19:19:45.1691 Info Adding target FileTarget(Name=logfile)
+2022-11-06 19:19:45.1976 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-06 19:20:56.3476 Info Message Template Auto Format enabled
+2022-11-06 19:20:56.4653 Info Adding target FileTarget(Name=logfile)
+2022-11-06 19:20:56.4965 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-06 19:21:25.7272 Info Message Template Auto Format enabled
+2022-11-06 19:21:25.7951 Info Adding target FileTarget(Name=logfile)
+2022-11-06 19:21:25.8195 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-06 19:22:37.8499 Info Message Template Auto Format enabled
+2022-11-06 19:22:37.8998 Info Adding target FileTarget(Name=logfile)
+2022-11-06 19:22:37.9205 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-06 19:29:43.2354 Info Message Template Auto Format enabled
+2022-11-06 19:29:43.2852 Info Adding target FileTarget(Name=logfile)
+2022-11-06 19:29:43.3057 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-06 19:47:16.4858 Info Message Template Auto Format enabled
+2022-11-06 19:47:16.5365 Info Adding target FileTarget(Name=logfile)
+2022-11-06 19:47:16.5572 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-06 20:07:44.5904 Info AppDomain Shutting down. LogFactory closing...
+2022-11-06 20:07:44.6078 Info LogFactory has been closed.
+2022-11-08 00:08:49.6169 Info Message Template Auto Format enabled
+2022-11-08 00:08:49.7697 Info Adding target FileTarget(Name=logfile)
+2022-11-08 00:08:49.8005 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 00:15:27.8626 Info Message Template Auto Format enabled
+2022-11-08 00:15:27.9133 Info Adding target FileTarget(Name=logfile)
+2022-11-08 00:15:27.9337 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 00:20:27.5021 Info Message Template Auto Format enabled
+2022-11-08 00:20:27.5594 Info Adding target FileTarget(Name=logfile)
+2022-11-08 00:20:27.5796 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 00:21:36.1111 Info Message Template Auto Format enabled
+2022-11-08 00:21:36.1631 Info Adding target FileTarget(Name=logfile)
+2022-11-08 00:21:36.1853 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 00:27:20.9226 Info Message Template Auto Format enabled
+2022-11-08 00:27:20.9761 Info Adding target FileTarget(Name=logfile)
+2022-11-08 00:27:20.9973 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 00:34:32.8588 Info Message Template Auto Format enabled
+2022-11-08 00:34:32.9523 Info Adding target FileTarget(Name=logfile)
+2022-11-08 00:34:32.9729 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 00:37:33.8102 Info Message Template Auto Format enabled
+2022-11-08 00:37:33.8820 Info Adding target FileTarget(Name=logfile)
+2022-11-08 00:37:33.9028 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 00:42:39.3946 Info Message Template Auto Format enabled
+2022-11-08 00:42:39.4484 Info Adding target FileTarget(Name=logfile)
+2022-11-08 00:42:39.4704 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 01:18:25.7735 Info Message Template Auto Format enabled
+2022-11-08 01:18:25.9267 Info Adding target FileTarget(Name=logfile)
+2022-11-08 01:18:25.9643 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 11:09:58.8261 Info Message Template Auto Format enabled
+2022-11-08 11:09:58.9969 Info Adding target FileTarget(Name=logfile)
+2022-11-08 11:09:59.0266 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 11:11:23.0004 Info Message Template Auto Format enabled
+2022-11-08 11:11:23.0712 Info Adding target FileTarget(Name=logfile)
+2022-11-08 11:11:23.0949 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 11:17:37.8437 Info Message Template Auto Format enabled
+2022-11-08 11:17:37.9567 Info Adding target FileTarget(Name=logfile)
+2022-11-08 11:17:37.9878 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 11:26:32.3712 Info Message Template Auto Format enabled
+2022-11-08 11:26:32.5372 Info Adding target FileTarget(Name=logfile)
+2022-11-08 11:26:32.5674 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 11:26:35.9995 Info Message Template Auto Format enabled
+2022-11-08 11:26:36.0501 Info Adding target FileTarget(Name=logfile)
+2022-11-08 11:26:36.0708 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 11:33:52.4645 Info Message Template Auto Format enabled
+2022-11-08 11:33:52.5145 Info Adding target FileTarget(Name=logfile)
+2022-11-08 11:33:52.5356 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 11:37:41.3988 Info Message Template Auto Format enabled
+2022-11-08 11:37:41.4527 Info Adding target FileTarget(Name=logfile)
+2022-11-08 11:37:41.4757 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 11:40:56.0354 Info Message Template Auto Format enabled
+2022-11-08 11:40:56.0858 Info Adding target FileTarget(Name=logfile)
+2022-11-08 11:40:56.1070 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 11:46:55.4696 Info Message Template Auto Format enabled
+2022-11-08 11:46:55.5198 Info Adding target FileTarget(Name=logfile)
+2022-11-08 11:46:55.5403 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 11:48:02.5726 Info Message Template Auto Format enabled
+2022-11-08 11:48:02.6497 Info Adding target FileTarget(Name=logfile)
+2022-11-08 11:48:02.6945 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 11:52:01.9211 Info Message Template Auto Format enabled
+2022-11-08 11:52:01.9712 Info Adding target FileTarget(Name=logfile)
+2022-11-08 11:52:02.0129 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 11:53:17.7251 Info Message Template Auto Format enabled
+2022-11-08 11:53:17.7968 Info Adding target FileTarget(Name=logfile)
+2022-11-08 11:53:17.8175 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 12:19:50.1937 Info Message Template Auto Format enabled
+2022-11-08 12:19:50.2985 Info Adding target FileTarget(Name=logfile)
+2022-11-08 12:19:50.3382 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 12:21:43.3519 Info Message Template Auto Format enabled
+2022-11-08 12:21:43.4030 Info Adding target FileTarget(Name=logfile)
+2022-11-08 12:21:43.4239 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 12:21:58.8765 Info Message Template Auto Format enabled
+2022-11-08 12:21:58.9275 Info Adding target FileTarget(Name=logfile)
+2022-11-08 12:21:58.9481 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 12:25:03.6622 Info Message Template Auto Format enabled
+2022-11-08 12:25:03.7125 Info Adding target FileTarget(Name=logfile)
+2022-11-08 12:25:03.7331 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 12:25:22.1558 Info Message Template Auto Format enabled
+2022-11-08 12:25:22.2540 Info Adding target FileTarget(Name=logfile)
+2022-11-08 12:25:22.2821 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 12:25:48.1407 Info Message Template Auto Format enabled
+2022-11-08 12:25:48.2438 Info Adding target FileTarget(Name=logfile)
+2022-11-08 12:25:48.2732 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 12:26:26.9383 Info Message Template Auto Format enabled
+2022-11-08 12:26:27.0428 Info Adding target FileTarget(Name=logfile)
+2022-11-08 12:26:27.0710 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 12:56:22.8718 Info Message Template Auto Format enabled
+2022-11-08 12:56:22.9214 Info Adding target FileTarget(Name=logfile)
+2022-11-08 12:56:22.9426 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-08 12:58:21.5193 Info Message Template Auto Format enabled
+2022-11-08 12:58:21.5730 Info Adding target FileTarget(Name=logfile)
+2022-11-08 12:58:21.5945 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-09 15:20:15.3991 Info Message Template Auto Format enabled
+2022-11-09 15:20:15.4587 Info Adding target FileTarget(Name=logfile)
+2022-11-09 15:20:15.4833 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-09 15:38:48.2791 Info AppDomain Shutting down. LogFactory closing...
+2022-11-09 15:38:48.2968 Info LogFactory has been closed.
+2022-11-09 18:35:12.7270 Info Message Template Auto Format enabled
+2022-11-09 18:35:12.7951 Info Adding target FileTarget(Name=logfile)
+2022-11-09 18:35:12.8188 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-09 18:35:24.8358 Info Message Template Auto Format enabled
+2022-11-09 18:35:24.9820 Info Adding target FileTarget(Name=logfile)
+2022-11-09 18:35:25.0128 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-09 18:40:28.1253 Info Message Template Auto Format enabled
+2022-11-09 18:40:28.2000 Info Adding target FileTarget(Name=logfile)
+2022-11-09 18:40:28.2213 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-09 19:05:11.8249 Info Message Template Auto Format enabled
+2022-11-09 19:05:11.9615 Info Adding target FileTarget(Name=logfile)
+2022-11-09 19:05:11.9930 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-09 19:05:49.9023 Info Message Template Auto Format enabled
+2022-11-09 19:05:50.0121 Info Adding target FileTarget(Name=logfile)
+2022-11-09 19:05:50.0529 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-09 19:21:13.3690 Info Message Template Auto Format enabled
+2022-11-09 19:21:13.4950 Info Adding target FileTarget(Name=logfile)
+2022-11-09 19:21:13.5513 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-09 20:40:43.9007 Info Message Template Auto Format enabled
+2022-11-09 20:40:44.0059 Info Adding target FileTarget(Name=logfile)
+2022-11-09 20:40:44.0345 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-09 22:12:33.6689 Info Message Template Auto Format enabled
+2022-11-09 22:12:33.7955 Info Adding target FileTarget(Name=logfile)
+2022-11-09 22:12:33.8302 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-09 22:14:02.2900 Info Message Template Auto Format enabled
+2022-11-09 22:14:02.4049 Info Adding target FileTarget(Name=logfile)
+2022-11-09 22:14:02.4332 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-09 22:20:41.2754 Info Message Template Auto Format enabled
+2022-11-09 22:20:41.3252 Info Adding target FileTarget(Name=logfile)
+2022-11-09 22:20:41.3454 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2022-11-09 22:29:36.3874 Info Message Template Auto Format enabled
+2022-11-09 22:29:36.4606 Info Adding target FileTarget(Name=logfile)
+2022-11-09 22:29:36.4824 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=F:\Courses\AspDotnetCoreWebApi\Applications\bsStoreApp\WebApi\nlog.config
+2025-03-06 23:33:24.9545 Info Message Template Auto Format enabled
+2025-03-06 23:33:25.0463 Info Adding target FileTarget(Name=logfile)
+2025-03-06 23:33:25.0726 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\mberk\OneDrive\Masaüstü\asp egitimim yeni\bsStoreApp\WebApi\nlog.config
+2025-03-06 23:52:58.1711 Info Message Template Auto Format enabled
+2025-03-06 23:52:58.2854 Info Adding target FileTarget(Name=logfile)
+2025-03-06 23:52:58.3179 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\mberk\OneDrive\Masaüstü\asp egitimim yeni\bsStoreApp\WebApi\nlog.config
+2025-03-10 00:29:28.5730 Info Message Template Auto Format enabled
+2025-03-10 00:29:28.6617 Info Adding target FileTarget(Name=logfile)
+2025-03-10 00:29:28.6858 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\mberk\OneDrive\Masaüstü\asp egitimim yeni\bsStoreApp\WebApi\nlog.config
+2025-03-10 18:35:43.0612 Info Message Template Auto Format enabled
+2025-03-10 18:35:43.1729 Info Adding target FileTarget(Name=logfile)
+2025-03-10 18:35:43.1967 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\mberk\OneDrive\Masaüstü\asp egitimim yeni\bsStoreApp\WebApi\nlog.config
+2025-03-11 00:34:32.9864 Info Message Template Auto Format enabled
+2025-03-11 00:34:33.1707 Info Adding target FileTarget(Name=logfile)
+2025-03-11 00:34:33.1982 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\mberk\OneDrive\Masaüstü\asp egitimim yeni\bsStoreApp\WebApi\nlog.config
+2025-03-11 00:35:26.7844 Info Message Template Auto Format enabled
+2025-03-11 00:35:26.8669 Info Adding target FileTarget(Name=logfile)
+2025-03-11 00:35:26.8952 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\mberk\OneDrive\Masaüstü\asp egitimim yeni\bsStoreApp\WebApi\nlog.config
+2025-03-12 02:05:32.4049 Info Message Template Auto Format enabled
+2025-03-12 02:05:32.5122 Info Adding target FileTarget(Name=logfile)
+2025-03-12 02:05:32.5344 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\mberk\OneDrive\Masaüstü\asp egitimim yeni\bsStoreApp\WebApi\nlog.config
+2025-03-12 02:29:17.0455 Info Message Template Auto Format enabled
+2025-03-12 02:29:17.1505 Info Adding target FileTarget(Name=logfile)
+2025-03-12 02:29:17.1901 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\mberk\OneDrive\Masaüstü\asp egitimim yeni\bsStoreApp\WebApi\nlog.config
+2025-03-12 18:53:25.0876 Info Message Template Auto Format enabled
+2025-03-12 18:53:25.1846 Info Adding target FileTarget(Name=logfile)
+2025-03-12 18:53:25.2123 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\mberk\OneDrive\Masaüstü\asp egitimim yeni\bsStoreApp\WebApi\nlog.config
+2025-03-12 18:59:33.8975 Info Message Template Auto Format enabled
+2025-03-12 18:59:34.0202 Info Adding target FileTarget(Name=logfile)
+2025-03-12 18:59:34.0499 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\mberk\OneDrive\Masaüstü\asp egitimim yeni\bsStoreApp\WebApi\nlog.config
+2025-03-12 19:00:26.4632 Info AppDomain Shutting down. LogFactory closing...
+2025-03-12 19:00:26.4824 Info LogFactory has been closed.
+2025-03-12 19:05:19.6038 Info Message Template Auto Format enabled
+2025-03-12 19:05:19.6906 Info Adding target FileTarget(Name=logfile)
+2025-03-12 19:05:19.7170 Info Validating config: TargetNames=logfile, ConfigItems=12, FilePath=C:\Users\mberk\OneDrive\Masaüstü\asp egitimim yeni\bsStoreApp\WebApi\nlog.config

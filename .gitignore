@@ -1,0 +1,11 @@
+*/bin
+*/obj
+/bsStoreApp/.vs
+/bsStoreApp/Presentation/bin
+/bsStoreApp/Presentation/obj
+/bsStoreApp/Repositories/bin
+/bsStoreApp/Repositories/obj
+/bsStoreApp/Services/bin
+/bsStoreApp/Services/obj
+/bsStoreApp/WebApi/bin
+/bsStoreApp/WebApi/obj
