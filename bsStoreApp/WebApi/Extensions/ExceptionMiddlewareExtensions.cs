@@ -16,10 +16,14 @@ namespace WebApi.Extensions
                 appError.Run(async context =>
                 {
                     context.Response.ContentType = "application/json";
-                    var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
+
+                    // boyle bir sey var mi kontrol ediliyor eger burda bisey varsa hata var demektir
+                    var contextFeature = context.Features.Get<IExceptionHandlerFeature>(); 
+
                     if(contextFeature is not null)
                     {
-                        context.Response.StatusCode = contextFeature.Error switch
+                        context.Response.StatusCode = contextFeature.Error 
+                        switch
                         {
                             NotFoundException => StatusCodes.Status404NotFound,
                             _ => StatusCodes.Status500InternalServerError

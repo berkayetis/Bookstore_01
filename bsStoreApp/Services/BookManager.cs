@@ -30,10 +30,11 @@ namespace Services
 
         public async Task<BookDto> CreateOneBookAsync(BookDtoForInsertion bookDto)
         {
-            var entity = _mapper.Map<Book>(bookDto);
+            Book entity = _mapper.Map<Book>(bookDto);
             _manager.Book.CreateOneBook(entity);
             await _manager.SaveAsync();
-            return _mapper.Map<BookDto>(entity);
+            BookDto result = _mapper.Map<BookDto>(entity);
+            return result;
         }
 
         public async Task DeleteOneBookAsync(int id, bool trackChanges)

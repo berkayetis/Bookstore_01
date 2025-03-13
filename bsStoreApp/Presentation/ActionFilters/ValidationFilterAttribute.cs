@@ -16,14 +16,10 @@ namespace Presentation.ActionFilters
             var action = context.RouteData.Values["action"];
 
             // Dto
-            var param = context.ActionArguments
-                .SingleOrDefault(p => p.Value.ToString().Contains("Dto")).Value;
-
+            var param = context.ActionArguments.SingleOrDefault(p => p.Value.ToString().Contains("Dto")).Value;
             if(param is null)
             {
-                context.Result = new BadRequestObjectResult($"Object is null. " +
-                    $"Controller : {controller} " +
-                    $"Action :  {action}" );
+                context.Result = new BadRequestObjectResult($"Object is null. " + $"Controller : {controller} " + $"Action :  {action}" );
                 return; // 400
             }
 

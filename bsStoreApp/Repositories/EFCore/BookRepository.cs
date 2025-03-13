@@ -22,7 +22,7 @@ namespace Repositories.EFCore
         public void DeleteOneBook(Book book) => Delete(book);
         public async Task<PagedList<Book>> GetAllBooksAsync(BookParameters bookParameters, bool trackChanges)
         {
-            var books = await FindAll(trackChanges).FilterBooks(bookParameters.MinPrice, bookParameters.MaxPrice).Search(bookParameters.SearchTerm).OrderBy(b => b.Id).ToListAsync();
+            var books = await FindAll(trackChanges).FilterBooks(bookParameters.MinPrice, bookParameters.MaxPrice).Search(bookParameters.SearchTerm).Sort(bookParameters.OrderBy).ToListAsync();
             return PagedList<Book>.ToPagedList(books, bookParameters.PageNumber, bookParameters.PageSize);
         }
 

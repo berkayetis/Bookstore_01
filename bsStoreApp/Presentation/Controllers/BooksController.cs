@@ -60,8 +60,7 @@ namespace Presentation.Controllers
         
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateOneBookAsync([FromRoute(Name = "id")] int id,
-            [FromBody] BookDtoForUpdate bookDto)
+        public async Task<IActionResult> UpdateOneBookAsync([FromRoute(Name = "id")] int id, [FromBody] BookDtoForUpdate bookDto)
         {
             await _manager.BookService.UpdateOneBookAsync(id, bookDto, false);
             return NoContent(); // 204
