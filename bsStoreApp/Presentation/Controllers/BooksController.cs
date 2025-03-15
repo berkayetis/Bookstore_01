@@ -29,12 +29,9 @@ namespace Presentation.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllBooksAsync([FromQuery] BookParameters bookParameters)
         {
-            var pagedResult = await _manager
-                .BookService
-                .GetAllBooksAsync(bookParameters,false);
+            var pagedResult = await _manager.BookService.GetAllBooksAsync(bookParameters,false);
 
-            Response.Headers.Add("Sayfalama", 
-                JsonSerializer.Serialize(pagedResult.metaData));
+            Response.Headers.Add("Sayfalama",  JsonSerializer.Serialize(pagedResult.metaData));
 
             return Ok(pagedResult.books);
         }
