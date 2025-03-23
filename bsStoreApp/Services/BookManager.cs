@@ -62,6 +62,12 @@ namespace Services
             return (books: shapedData, metaData: booksWithMetaData.MetaData);
         }
 
+        public async Task<List<Book>> GetAllBooksAsync(bool trackChanges)
+        {
+            var bookList = await _manager.Book.GetAllBooksAsync(trackChanges);
+            return bookList;
+        }
+
         public async Task<BookDto> GetOneBookByIdAsync(int id, bool trackChanges)
         {
             var book =  await GetOneBookByIdAndCheckExists(id,trackChanges);
@@ -72,8 +78,7 @@ namespace Services
             return _mapper.Map<BookDto>(book);
         }
 
-        public async Task<(BookDtoForUpdate bookDtoForUpdate, Book book)> 
-            GetOneBookForPatchAsync(int id, bool trackChanges)
+        public async Task<(BookDtoForUpdate bookDtoForUpdate, Book book)> GetOneBookForPatchAsync(int id, bool trackChanges)
         {
             var book = await GetOneBookByIdAndCheckExists(id, trackChanges);
             var bookDtoForUpdate = _mapper.Map<BookDtoForUpdate>(book);

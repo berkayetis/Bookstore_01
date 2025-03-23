@@ -7,9 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Asp.Versioning.Mvc" Version="6.4.1" />
+    <PackageReference Include="Marvin.Cache.Headers" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="6.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.ResponseCaching" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>

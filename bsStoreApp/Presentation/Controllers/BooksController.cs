@@ -1,7 +1,9 @@
-﻿using Entities.DataTransferObjects;
+﻿using Asp.Versioning;
+using Entities.DataTransferObjects;
 using Entities.Exceptions;
 using Entities.Models;
 using Entities.RequestFeatures;
+using Marvin.Cache.Headers;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Presentation.ActionFilters;
@@ -15,9 +17,12 @@ using System.Threading.Tasks;
 
 namespace Presentation.Controllers
 {
+    [ApiVersion("1.0")]
     [ServiceFilter(typeof(LogFilterAttribute))]
     [ApiController]
-    [Route("api/books")]
+    [Route("api/v{version:apiVersion}/books")]
+    //[ResponseCache(CacheProfileName = "5mins")]
+    //[HttpCacheExpiration(CacheLocation = CacheLocation.Public, MaxAge = 80)]
     public class BooksController : ControllerBase
     {
         private readonly IServiceManager _manager;
@@ -26,7 +31,8 @@ namespace Presentation.Controllers
             _manager = manager;
         }
 
-        [HttpGet]
+        [HttpHead]
+        [HttpGet(Name = "GetAllBooksAsync")]
         public async Task<IActionResult> GetAllBooksAsync([FromQuery] BookParameters bookParameters)
         {
             var pagedResult = await _manager.BookService.GetAllBooksAsync(bookParameters,false);
@@ -47,7 +53,7 @@ namespace Presentation.Controllers
         }
 
         [ServiceFilter(typeof(ValidationFilterAttribute))]
-        [HttpPost]
+        [HttpPost(Name = "CreateOneBookAsync")]
         public async Task<IActionResult> CreateOneBookAsync([FromBody] BookDtoForInsertion bookDto)
         {
             var book = await _manager.BookService.CreateOneBookAsync(bookDto);
@@ -72,8 +78,7 @@ namespace Presentation.Controllers
 
 
         [HttpPatch("{id:int}")]
-        public async Task<IActionResult> PartiallyUpdateOneBookAsync([FromRoute(Name = "id")] int id,
-            [FromBody] JsonPatchDocument<BookDtoForUpdate> bookPatch)
+        public async Task<IActionResult> PartiallyUpdateOneBookAsync([FromRoute(Name = "id")] int id, [FromBody] JsonPatchDocument<BookDtoForUpdate> bookPatch)
         {
 
             if (bookPatch is null)
@@ -91,6 +96,13 @@ namespace Presentation.Controllers
             await _manager.BookService.SaveChangesForPatchAsync(result.bookDtoForUpdate, result.book);
           
             return NoContent(); // 204
+        }
+
+        [HttpOptions]
+        public IActionResult GetBooksOptions()
+        {
+            Response.Headers.Add("Allow", "GET, PUT, POST, PATCH, DELETE, HEAD, OPTIONS");
+            return Ok();
         }
     }
 }
