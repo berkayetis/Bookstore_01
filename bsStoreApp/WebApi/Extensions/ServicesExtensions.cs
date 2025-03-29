@@ -9,6 +9,8 @@ using Services;
 using Services.Contracts;
 using Asp.Versioning;
 using AspNetCoreRateLimit;
+using Entities.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace WebApi.Extensions
 {
@@ -113,6 +115,7 @@ namespace WebApi.Extensions
                 validationOpt.MustRevalidate = false;
             }); 
         }
+
         public static void ConfigureRateLimitingOptions(this IServiceCollection services)
         {
             var rateLimitRules = new List<RateLimitRule>()
@@ -135,6 +138,22 @@ namespace WebApi.Extensions
             services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
             services.AddSingleton<IProcessingStrategy, AsyncKeyLockProcessingStrategy>();
 
+        }
+
+        public static void ConfigureIdentity(this IServiceCollection services)
+        {
+            services.AddIdentity<User, IdentityRole>(opts =>
+            {
+                opts.Password.RequireDigit = true;
+                opts.Password.RequireLowercase = false;
+                opts.Password.RequireUppercase = false;
+                opts.Password.RequireNonAlphanumeric = false;
+                opts.Password.RequiredLength = 6;
+
+                opts.User.RequireUniqueEmail = true;
+            })
+            .AddEntityFrameworkStores<RepositoryContext>()
+            .AddDefaultTokenProviders(); // jwt token icin gerekli
         }
     }
 }
