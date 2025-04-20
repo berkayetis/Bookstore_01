@@ -31,7 +31,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.ConfigureSwagger();
 
 builder.Services.ConfigureSqlContext(builder.Configuration);
 builder.Services.ConfigureRepositoryManager();
@@ -49,26 +49,38 @@ builder.Services.AddMemoryCache();
 builder.Services.ConfigureRateLimitingOptions();
 builder.Services.AddHttpContextAccessor();
 
-builder.Services.AddAuthentication();
 builder.Services.ConfigureIdentity();
+builder.Services.ConfigureJWT(builder.Configuration);
 
 var app = builder.Build();
 
 var logger = app.Services.GetRequiredService<ILoggerService>();
 app.ConfigureExceptionHandler(logger);
 
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Environment.EnvironmentName == "Docker")
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(s =>
+    {
+        s.SwaggerEndpoint("/swagger/v1/swagger.json", "Berkay Yetis V1");
+        s.SwaggerEndpoint("/swagger/v2/swagger.json", "Berkay Yetis V2");
+    });
 }
 
-if(app.Environment.IsProduction())
+else if(app.Environment.IsProduction())
 {
+    app.UseSwagger();
+    app.UseSwaggerUI(s =>
+    {
+        s.SwaggerEndpoint("/swagger/v1/swagger.json", "Berkay Yetis V1");
+        s.SwaggerEndpoint("/swagger/v2/swagger.json", "Berkay Yetis V2");
+    });
+
     app.UseHsts();
+    app.UseHttpsRedirection();
+
 }
 
-app.UseHttpsRedirection();
 
 app.UseIpRateLimiting();
 app.UseCors("CorsPolicy");

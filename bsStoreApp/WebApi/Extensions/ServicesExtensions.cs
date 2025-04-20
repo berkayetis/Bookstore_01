@@ -11,6 +11,11 @@ using Asp.Versioning;
 using AspNetCoreRateLimit;
 using Entities.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.OpenApi.Models;
+using System.Diagnostics;
 
 namespace WebApi.Extensions
 {
@@ -123,7 +128,7 @@ namespace WebApi.Extensions
                 new RateLimitRule()
                 {
                     Endpoint = "*",
-                    Limit = 3,
+                    Limit = 20,
                     Period = "1m"
                 }
             };
@@ -154,6 +159,75 @@ namespace WebApi.Extensions
             })
             .AddEntityFrameworkStores<RepositoryContext>()
             .AddDefaultTokenProviders(); // jwt token icin gerekli
+        }
+        public static void ConfigureSwagger(this IServiceCollection services)
+        {          
+            services.AddSwaggerGen(s =>
+            {
+                s.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo {
+                    Title = "Berkay Yetis", 
+                    Version = "v1" ,
+                    Description = "Book store Web Api",
+                    TermsOfService = new Uri("https://www.google.com.tr/"),
+                    Contact =  new OpenApiContact()
+                    {
+                        Name = "Muhammed Berkay Yetiş",
+                        Email = "mberkayetis@gmail.com",
+                        Url = new Uri("https://www.google.com.tr/")
+                    }
+                });
+                s.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo {Title = "Berkay Yetis", Version = "v2" });
+
+                // 👇 Bearer Token Security tanımı
+                s.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme()
+                {
+                    In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+                    Description = "place to add jwt with bearer",
+                    Name = "Authorization", // Swagger'ın header'a eklediği isim budur
+                    Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
+
+                // 👇 Bu güvenlik tanımını tüm endpointlere uygula
+                s.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement()
+                {
+                   {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            },
+                            Name = "Bearer"
+                        },
+                        new List<string>() // burada scope bilgisi olur, boş geçilebilir
+                   }
+                });
+            });
+        }
+
+        public static void ConfigureJWT(this IServiceCollection services, IConfiguration configuration)
+        {
+            var jwtSettings = configuration.GetSection("JwtSettings");
+            var secretKey = jwtSettings["secretKey"];
+
+            services.AddAuthentication(opt =>
+            {
+                opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options => {
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwtSettings["validIssuer"],
+                    ValidAudience = jwtSettings["validAudience"],
+                    IssuerSigningKey =  new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
+                };
+            });
         }
     }
 }

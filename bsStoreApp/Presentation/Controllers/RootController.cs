@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 namespace Presentation.Controllers
 {
     [ApiController]
+    [ApiExplorerSettings(GroupName = "v1")]
+
     [Route("api")]
     public class RootController : ControllerBase
     {

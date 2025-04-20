@@ -1,0 +1,40 @@
+# Uygulamanýn çalýþacaðý temel ASP.NET ortamýný kullanýyoruz (sadece uygulamayý çalýþtýrmak için yeterli)
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+# Bu aþama projeyi derlemek (build) için gerekli .NET SDK içeren bir ortam oluþturur
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
+
+# Her bir .csproj dosyasýný kendi klasörüne kopyalýyoruz (baðýmlýlýklarý tanýmak için)
+COPY ["WebApi/WebApi.csproj", "WebApi/"]
+COPY ["Entities/Entities.csproj", "Entities/"]
+COPY ["Presentation/Presentation.csproj", "Presentation/"]
+COPY ["Services/Services.csproj", "Services/"]
+COPY ["Repositories/Repositories.csproj", "Repositories/"]
+
+# Projenin NuGet paketlerini indiriyoruz
+RUN dotnet restore "WebApi/WebApi.csproj"
+
+# Þimdi tüm klasörleri (tüm kodlarý) Docker ortamýna kopyalýyoruz
+COPY . .
+
+# WebApi projesine geçiyoruz (çalýþtýrýlacak ana proje bu)
+WORKDIR "/src/WebApi"
+
+# Projeyi derliyoruz ve çýktýlarý /app/build klasörüne koyuyoruz
+RUN dotnet build "WebApi.csproj" -c Release -o /app/build
+
+# Yayýn dosyalarýný çýkartmak için publish adýmý
+FROM build AS publish
+RUN dotnet publish "WebApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+# Son olarak base imajdan çalýþacak halini oluþturuyoruz
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+
+# Uygulama baþlatýldýðýnda çalýþacak komutu belirliyoruz
+ENTRYPOINT ["dotnet", "WebApi.dll"]

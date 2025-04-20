@@ -8,25 +8,25 @@ namespace WebApi.Extensions
 {
     public static class ExceptionMiddlewareExtensions
     {
-        public static void ConfigureExceptionHandler(this WebApplication app,
-            ILoggerService logger)
+        public static void ConfigureExceptionHandler(this WebApplication app, ILoggerService logger)
         {
             app.UseExceptionHandler(appError =>
             {
+                //Run(...): Bir middleware fonksiyonudur. Hata meydana geldiğinde çalışır
                 appError.Run(async context =>
                 {
                     context.Response.ContentType = "application/json";
 
-                    // boyle bir sey var mi kontrol ediliyor eger burda bisey varsa hata var demektir
-                    var contextFeature = context.Features.Get<IExceptionHandlerFeature>(); 
+                    // ASP.NET Core’un sağladığı IExceptionHandlerFeature üzerinden gerçekleşen hatayı alır.                 
+                    var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
 
-                    if(contextFeature is not null)
+                    //Eğer contextFeature != null ise, demek ki gerçekten bir hata olmuştur.
+                    if (contextFeature is not null)
                     {
                         context.Response.StatusCode = contextFeature.Error 
                         switch
                         {
-                            NotFoundException => StatusCodes.Status404NotFound,
-                            _ => StatusCodes.Status500InternalServerError
+                            NotFoundException => StatusCodes.Status404NotFound, _ => StatusCodes.Status500InternalServerError
                         };
 
                         logger.LogError($"Something went wrong: {contextFeature.Error}");

@@ -9,16 +9,20 @@ namespace WebApi.ContextFactory
     {
         public RepositoryContext CreateDbContext(string[] args)
         {
-            // configurationBuilder
+            // Ortam adı: Docker mı, Development mı?
+            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+
+            // Konfigürasyon dosyalarını sırayla ekliyoruz
             var configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
+                .AddJsonFile("appsettings.json", optional: false)
+                .AddJsonFile($"appsettings.{environment}.json", optional: true) // Örn: appsettings.Docker.json
                 .Build();
 
             // DbContextOptionsBuilder
             var builder = new DbContextOptionsBuilder<RepositoryContext>()
                 .UseSqlServer(configuration.GetConnectionString("sqlConnection"),
-                prj => prj.MigrationsAssembly("WebApi"));
+                prj => prj.MigrationsAssembly("Repositories"));
 
             return new RepositoryContext(builder.Options);
         }

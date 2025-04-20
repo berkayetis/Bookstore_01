@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 namespace Presentation.Controllers
 {
     [ApiController]
+    [ApiExplorerSettings(GroupName = "v1")]
+
     [Route("api/authentication")]
     public class AuthenticationController : ControllerBase
     {
@@ -39,6 +41,28 @@ namespace Presentation.Controllers
                 }
                 return BadRequest(ModelState);
             }
+        }
+
+        [HttpPost("login")]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
+        public async Task<IActionResult> Authenticate([FromBody] UserForAuthenticationDto userForAuthenticationDto)
+        {
+            var isValid = await _serviceManager.AuthenticationService.ValidateUser(userForAuthenticationDto);
+            if(!isValid)
+            {
+                return Unauthorized("Invalid user and password");
+            }
+
+            var tokenDto = await _serviceManager.AuthenticationService.CreateToken(true);
+            return Ok(tokenDto);
+        }
+
+        [HttpPost("refresh")]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
+        public async Task<IActionResult> Refresh([FromBody] TokenDto tokenDto)
+        {
+            TokenDto resultToken = await _serviceManager.AuthenticationService.RefreshToken(tokenDto);
+            return Ok(resultToken);
         }
     }
 }
