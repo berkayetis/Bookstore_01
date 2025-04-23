@@ -8,7 +8,7 @@ Docker Desktop ✅
 
 git clone https://github.com/berkayetis/Bookstore_01.git
 
-cd Bookstore_01
+cd bsStoreApp
 
 🐳 2.  Apply EF Core Migrations & Start Services with Docker Compose
 
