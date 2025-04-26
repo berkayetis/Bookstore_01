@@ -8,7 +8,7 @@ using Repositories.EFCore;
 
 #nullable disable
 
-namespace WebApi.Migrations
+namespace Repositories.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
     partial class RepositoryContextModelSnapshot : ModelSnapshot
@@ -168,22 +168,22 @@ namespace WebApi.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "17d8e03a-757a-46a9-b0fb-4bc1ef5b77de",
-                            ConcurrencyStamp = "bf1fb339-0618-417a-be01-2d11f5973cf8",
+                            Id = "b4ca4321-7724-4853-88e5-5c97a042b3a7",
+                            ConcurrencyStamp = "a474249a-f512-470f-9233-a8a677ed93ed",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "b540283d-9bad-405b-ba56-d3a10c78ec30",
-                            ConcurrencyStamp = "62fc076f-e2a5-4bad-99d5-77bd3d5de8c4",
+                            Id = "77df37d0-ba2d-468d-adce-2ce04dc20eb2",
+                            ConcurrencyStamp = "a504a5a7-198c-4498-8c69-6448e0bc4777",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "26251e92-c8c2-4311-88de-b9186e903308",
-                            ConcurrencyStamp = "61311a79-557d-4869-a3d4-cc8ad519c003",
+                            Id = "bc6bdb9e-d2cf-48a7-8632-803b4b26ac31",
+                            ConcurrencyStamp = "cbafecf2-374d-4ab2-868c-84caf642a06f",
                             Name = "Editor",
                             NormalizedName = "EDITOR"
                         });
