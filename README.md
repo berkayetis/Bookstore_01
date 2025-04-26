@@ -1,6 +1,10 @@
+⚙️ About
+
+Layered Architecture , Entity Framework Core + MSSQL database 
+
 🚀 Prerequisites
 
-Docker Desktop ✅ 
+Docker Desktop
 
 .NET 6 SDK
 
